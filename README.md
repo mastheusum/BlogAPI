@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 3.1.4
+* Rails Version: 7.0.8
+* Database: Postgresql 14.3
 
-Things you may want to cover:
+O start this application
 
-* Ruby version
+- Configure **database.yml** with your postgresql's username and password
+- Run the following commands in prompt/terminal
 
-* System dependencies
+```bash
+bundle install
 
-* Configuration
+rails db:create 
+rails db:migrate 
+rails db:seed
 
-* Database creation
+rails server
+```
 
-* Database initialization
+Routes:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- index:  GET       /api/v1/posts
+- show:   GET       /api/v1/posts/:id
+- create: POST      /api/v1/posts
+- update: PATCH/PUT /api/v1/posts/:id
+- delete: DELET     /api/v1/posts/:id
